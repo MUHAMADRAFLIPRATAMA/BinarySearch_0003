@@ -33,3 +33,20 @@ void input()
     }
 }
 
+void bubbleSortArray()
+{
+    int pass = 1;
+    do
+    {
+        for (int i = 0; i <= nPanjang - pass - 1; i++)
+        {
+            if (element[i] > element[i + 1])
+            {
+                int temp = element[i];
+                element[i] = element[i + 1];
+                element[i + 1] = temp;
+            }
+        }
+        pass++;
+    } while (pass < nPanjang);
+}
